@@ -4,7 +4,6 @@
 ## 基礎訊息
 
 - **基礎URL**：`https://api.todolistapp.com`
-- **版本控制**：目前版本為`v1`，所有API路徑遠端應為`/v1`，例如`/v1/auth/register`。
 - **內容類型**：`application/json`
 - **認證**：使用基於JWT的認證機制，客戶端必須在請求的`Authorization`頭部攜帶有效的JWT令牌。
 
@@ -36,7 +35,7 @@
 
 #### 註冊
 
-- **URL**：`/v1/auth/register`
+- **URL**：`/api/auth/register`
 - **方法**：`POST`
 - **參數**：
   - `email` (字串): 使用者信箱
@@ -47,7 +46,7 @@
 
 #### 登入
 
-- **URL**：`/v1/auth/login`
+- **URL**：`/api/auth/login`
 - **方法**：`POST`
 - **參數**：
   - `email` (字串): 使用者信箱
@@ -60,7 +59,7 @@
 
 #### 建立待辦事項
 
-- **網址**：`/v1/todos`
+- **網址**：`/api/todos`
 - **方法**：`POST`
 - **參數**：
   - `title` (string): 待辦事項標題
@@ -74,7 +73,7 @@
 
 #### 提醒
 
-- **URL**：`/v1/todos/{id}/reminders`
+- **URL**：`/api/todos/{id}/reminders`
 - **方法**：`POST`
 - **參數**：
   - `type` (string): 提醒類型（`email`, `push`, `sms`）
